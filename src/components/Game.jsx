@@ -36,7 +36,7 @@ function Game() {
             [2, 4, 6]
         ];
 
-        // using a for loop in order to calculate the winner 
+        // Using a for loop in order to calculate the winner 
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i];
             if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -46,7 +46,7 @@ function Game() {
         return null;
     }
 
-    // function for the reset button
+    // Function for creating a reset button
 
     function handleReset() {
         setSquares(Array(9).fill(null));
@@ -89,7 +89,7 @@ function Game() {
         }
     }
 
-    // ensuring the confetti only falls when a player has won
+    // Ensuring the confetti only falls when a player has won
     useEffect(() => {
         if (winner) {
             setShowConfetti(true);
@@ -98,7 +98,7 @@ function Game() {
     }, [winner]);
 
 
-    // the main return statement for the game function, returning all the elements above
+    // Main return statement for the game function, rendering all the elements above
     return (
         <div className="game">
             <div className="game-board">
