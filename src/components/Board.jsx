@@ -1,7 +1,7 @@
 import React from "react";
 import Square from "./Square";
 
-// main function receives props
+// Main function receives props
 function Board({ xIsNext, squares, onPlay }) {
 
 // Handles the logic, 'click' on a square, updating the square's value
