@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #962828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh;
+}
+
+/* CSS for the title of the game */
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: rgb(211, 211, 178);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px 0; 
+}
+
+h1:hover {
+  color: rgb(191, 102, 102);
+}
+
+#description {
+  color: rgb(211, 211, 178);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 30px;
+}
+
+
+/* CSS for the boxes that appear */
+
+.square {
+  background: #ddc8c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c14141;
+  font-size: 70px;
+  font-weight: bold;
+  height: 120px; 
+  width: 120px; 
+  text-align: center;
+  margin: 5px;
+}
+
+.board-row {
+  display: flex; 
+}
+
+
+/* CSS for the text underneath the game */
+.status {
+  margin-bottom: 50px;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(211, 211, 178);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin: 10 auto; 
+  
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+.game-info {
+  margin-left: 50px;
+  
+}
+
+/* CSS for reset button */
+
+#resetButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: (211, 211, 178);
+  color: rgb(161, 76, 76);
+  border: 2px solid #c14141;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#resetButton:hover {
+  background-color: rgb(211, 211, 178); 
+}
+
+
+/* All CSS for falling confetti animation */
+#confetti {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+#confetti .ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FFCC00;
+  animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Create multiple confetti balls */
+#confetti .ball:nth-child(odd) {
+  animation-delay: 0.3s;
+  background-color: #FF5733;
+}
+
+#confetti .ball:nth-child(even) {
+  animation-delay: 0.2s;
+  background-color: #33FFCC;
+}
+#confetti .ball.red {
+  background-color: #FF5733; /* Red */
+}
+
+#confetti .ball.green {
+  background-color: #33FF57; /* Green */
+}
+
+#confetti .ball.blue {
+  background-color: #3357FF; /* Blue */
+}
+
+#confetti .ball.yellow {
+  background-color: #FFFF33; /* Yellow */
+}
+
+#confetti .ball.magenta {
+  background-color: #FF33FF; /* Magenta */
+}
+
+#confetti .ball.cyan {
+  background-color: #33FFFF; /* Cyan */
+}
+
+#confetti .ball.orange {
+  background-color: #FF6633; /* Orange */
+}
+
+#confetti .ball.pink {
+  background-color: #FF33A1; /* Pink */
+}
+
+#confetti .ball.lime {
+  background-color: #B8FF33; /* Lime */
+}
+
+#confetti .ball.indigo {
+  background-color: #3333FF; /* Indigo */
+}
