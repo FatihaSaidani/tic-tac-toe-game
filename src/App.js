@@ -10,6 +10,7 @@ function App () {
     <p id="description">The classic, much loved game of noughts and crosses!</p>
     <div id="confetti"></div>
     <Game/>
+    <p id="credit"> Created by: Fatiha Saidani</p>
     </>
   );
 }
